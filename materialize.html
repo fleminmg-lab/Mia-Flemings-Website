@@ -1,0 +1,83 @@
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="materialize.html">Materialize</a></li>
+</ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materialize Page</title>
+  <!-- Materialize CSS CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <style>
+    body {
+      background-color: #f0f8ff; /* light custom background */
+    }
+    nav {
+      background-color: #1e88e5; /* custom nav color */
+    }
+    .circular-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .content-section {
+      padding: 20px;
+    }
+    .video-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">My Materialize Page</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="otherpage.html">Other Page</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container content-section">
+    <h3 class="center">Welcome to My Materialize Page</h3>
+
+    <!-- Circular Image -->
+    <div class="center">
+      <img src="Images/Catching.jpg" alt="Profile Image" class="circular-img">
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="row">
+      <div class="col s12 m6">
+        <img src="Images/Big M.jpg" alt="Softball Action 1" class="responsive-img">
+      </div>
+      <div class="col s12 m6">
+        <img src="Images/With Mom.jpeg" alt="Softball Action 2" class="responsive-img">
+      </div>
+    </div>
+
+    <!-- Embedded YouTube Video -->
+  <div class="video-container">
+  <iframe src="https://youtu.be/unfzfe8f9NI?si=WEOCbZK9_nQXJuwH" allowfullscreen></iframe>
+</div>
+
+  <!-- Footer -->
+  <footer class="page-footer blue darken-2">
+    <div class="container center">
+      <p>&copy; 2026 Mia Fleming</p>
+    </div>
+  </footer>
+</body>
+</html>
