@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Materialize Flexbox Example</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <style>
+    body {
+      background: #f5f5f5;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 300px;
+      margin-top: 50px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+    }
+
+    .box1 { background-color: #e57373; }
+    .box2 { background-color: #64b5f6; }
+    .box3 { background-color: #81c784; }
+  </style>
+</head>
+
+<body>
+
+  <div class="container center-align">
+    <h3>Materialize Flexbox Layout</h3>
+    <p>This example shows how flexboxes can organize content easily.</p>
+
+    <div class="flex-container">
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+      <div class="box box3">Box 3</div>
+    </div>
+
+    <br>
+
+    <a class="btn waves-effect waves-light red">Red Button</a>
+    <a class="btn waves-effect waves-light blue">Blue Button</a>
+    <a class="btn waves-effect waves-light green">Green Button</a>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
