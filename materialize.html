@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materialize Page</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f0f8ff;
+    }
+
+    nav {
+      background-color: #1e88e5;
+    }
+
+    .circular-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .content-section {
+      padding: 20px;
+    }
+
+    .carousel.carousel-slider {
+      height: 400px;
+    }
+
+    .carousel.carousel-slider .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    .video-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">My Materialize Page</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container content-section">
+    <h3 class="center">Welcome to My Materialize Page</h3>
+
+    <!-- Carousel -->
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item">
+        <img src="Images/Catching.jpg" alt="Catching">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/Big M.jpg" alt="Big M">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/With Mom.jpeg" alt="With Mom">
+      </div>
+    </div>
+
+    <!-- Circular Image -->
+    <div class="center">
+      <img src="Images/Catching.jpg" alt="Profile Image" class="circular-img">
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="row">
+      <div class="col s12 m6">
+        <img src="Images/Big M.jpg" class="responsive-img" alt="Softball Action 1">
+      </div>
+      <div class="col s12 m6">
+        <img src="Images/With Mom.jpeg" class="responsive-img" alt="Softball Action 2">
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="video-container">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/unfzfe8f9NI" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Collapsible -->
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">My Freshman Year</div>
+        <div class="collapsible-body"><span>Playing college softball has helped me grow mentally and physically.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header">Biggest Challenge</div>
+        <div class="collapsible-body"><span>Balancing school, practice, and personal life.</span></div>
+      </li>
+    </ul>
+
+    <!-- Radio Button JS Interaction -->
+    <div class="section">
+      <p><strong>What is your favorite part of softball?</strong></p>
+      <label>
+        <input name="softball" type="radio" value="Practice" />
+        <span>Practice</span>
+      </label>
+      <br>
+      <label>
+        <input name="softball" type="radio" value="Games" />
+        <span>Games</span>
+      </label>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer blue darken-2">
+    <div class="container center">
+      <p>&copy; 2026 Mia Fleming</p>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Carousel
+      var elemsCarousel = document.querySelectorAll('.carousel');
+      var instancesCarousel = M.Carousel.init(elemsCarousel, {
+        fullWidth: true,
+        indicators: true
+      });
+
+      // Auto-slide every 3 seconds
+      setInterval(() => {
+        instancesCarousel.forEach(instance => instance.next());
+      }, 3000);
+
+      // Collapsible
+      var elemsCollapsible = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(elemsCollapsible);
+
+      // Radio button alert
+      const radios = document.querySelectorAll('input[type="radio"]');
+      radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          alert("You selected: " + radio.value);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
